@@ -12,4 +12,19 @@ router.get('/albums', async(req, res, next) =>  {
   }
 })
 
+router.get('/albums/:albumId', async(req, res, next) =>  {
+  try {
+    const id = req.params.albumId
+    const album = await Album.findOne({
+      where: { 
+        id
+      }
+    });
+    res.status(200).send(album);
+  } catch (error) {
+    console.log('This is the error ', error);
+    next(error);
+  }
+})
+
 module.exports = router
