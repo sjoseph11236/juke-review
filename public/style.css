@@ -14,7 +14,10 @@ body {
   color: #f2f2f2;
   letter-spacing: 0.03em;
 }
-
+a { 
+  color: white;
+  text-decoration: none;
+}
 i {
   color: #00aaaa;
   font-size: 2em;

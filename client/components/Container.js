@@ -1,8 +1,16 @@
 import React from 'react'
+import Album from '../components/Album'
 
-const Container = () => {
+const Container = ({albums}) => {
   return ( 
-    <div className="container"></div>
+    <div className="container">
+      {/* All albums */}
+      <div id="albums" className='row wrap'>
+        {albums.map( album => {
+          return <Album album={album} key={album.id} />
+        })}
+      </div>
+    </div>
   );
 }
 
