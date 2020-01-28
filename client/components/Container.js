@@ -1,33 +1,22 @@
 import React from 'react'
 import Album from '../components/Album'
-import SingleAlbum from './SingleAlbum';
+import SingleAlbum from '../components/SingleAlbum'
 
-const Container = ({albums, currentPage, selectedAlbum }) => {
+const Container = ({albums, handleSelectedAlbum }) => {
 
-  switch(currentPage) { 
-    case 'single-album':
-      return ( 
-        <div className="container">
-          {/* Single-album */}
-          <SingleAlbum selectedAlbum={selectedAlbum}/>
-        </div>
-      );
-      break;
-    case 'all-albums':
-      return ( 
-        <div className="container">
-          {/* All albums */}
-          <div id="albums" className='row wrap'>
-            {albums.map( album => {
-              return <Album album={album} key={album.id} />
-            })}
-          </div>
-        </div>
-      );
-      break;
-  }
-
-
+  return ( 
+    <div className="container">
+      {/* All albums */}
+      {/* <div id="albums" className='row wrap'>
+        {albums.map( album => {
+          return <Album album={album} key={album.id} handleSelectedAlbum={handleSelectedAlbum} />
+        })}
+      </div> */}
+      <SingleAlbum
+                selectedAlbum={selectedAlbum}
+              />
+    </div>
+  );
 }
 
 export default Container;

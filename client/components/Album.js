@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Album = ({album}) => {
+const Album = ({album, handleSelectedAlbum}) => {
   return ( 
     <div className="album">
-      <a href={`/albums/${album.id}`}>
+      <a  onClick={handleSelectedAlbum}>
         <img src={album.artworkUrl} alt="imageCover"/>
         <p>{album.name}</p>
         <small>{album.artist.name}</small>
