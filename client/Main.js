@@ -58,8 +58,7 @@ export default class Main extends React.Component {
   render () {
 
     const { albums, currentPage, selectedAlbum} = this.state;
-   
-  
+
     return (
       <div id='main' className='row container'>
         {/* The music starts here! */}
@@ -71,9 +70,9 @@ export default class Main extends React.Component {
               :
               
         } */}
-        <SingleAlbum
+        {/* <SingleAlbum
                 selectedAlbum={selectedAlbum}
-              />
+              /> */}
         {/* <Container 
           albums={albums} 
           currentPage={currentPage} 
