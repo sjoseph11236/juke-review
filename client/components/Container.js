@@ -2,19 +2,20 @@ import React from 'react'
 import Album from '../components/Album'
 import SingleAlbum from '../components/SingleAlbum'
 
-const Container = ({albums, handleSelectedAlbum }) => {
+const Container = ({albums, handleSelectedAlbum, selectedAlbum }) => {
 
   return ( 
     <div className="container">
       {/* All albums */}
-      {/* <div id="albums" className='row wrap'>
+      {selectedAlbum.id ? 
+      <SingleAlbum
+        selectedAlbum={selectedAlbum}
+      />:
+      <div id="albums" className='row wrap'>
         {albums.map( album => {
           return <Album album={album} key={album.id} handleSelectedAlbum={handleSelectedAlbum} />
         })}
-      </div> */}
-      <SingleAlbum
-                selectedAlbum={selectedAlbum}
-              />
+      </div> }
     </div>
   );
 }

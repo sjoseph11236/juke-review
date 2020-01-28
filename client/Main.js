@@ -58,27 +58,19 @@ export default class Main extends React.Component {
   render () {
 
     const { albums, currentPage, selectedAlbum} = this.state;
-
+    console.log("TCL: Main -> render ->  selectedAlbum",  selectedAlbum);
+    
     return (
       <div id='main' className='row container'>
         {/* The music starts here! */}
         {/* Sidebar */}
         <SideBar />
-        {/* {
-          selectedAlbum.id
-          ? 
-              :
-              
-        } */}
-        {/* <SingleAlbum
-                selectedAlbum={selectedAlbum}
-              /> */}
-        {/* <Container 
+        <Container 
           albums={albums} 
           currentPage={currentPage} 
           selectedAlbum={selectedAlbum} 
           handleSelectedAlbum={this.handleSelectedAlbum} 
-          /> */}
+          />
         {/* player-container */}
         <PlayContainer/>
       </div>
